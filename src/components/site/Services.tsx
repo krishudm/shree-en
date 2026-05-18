@@ -1,18 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import {
-  ArrowUpRight,
-  Wrench,
-  Hammer,
-  ShieldCheck,
-  Package,
-  Search,
-  Settings,
-  Home,
-  Sprout,
-  Factory,
-  Cog,
-} from "lucide-react";
+import { ArrowUpRight, Wrench, Hammer, ShieldCheck, Package, Search, Settings, Chrome as Home, Sprout, Factory, Cog } from "lucide-react";
 import { solutions } from "@/data/solutions";
 
 const icons: Record<string, typeof Home> = {
@@ -59,13 +47,13 @@ export const Services = () => {
   return (
     <section id="services" className="py-16 md:py-25">
       <div className="container-tight">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-6 mb-10 sm:mb-16">
           <div>
-            <div className="eyebrow mb-5">
+            <div className="eyebrow mb-4 sm:mb-5">
               <span className="inline-block h-px w-8 bg-primary align-middle mr-3" />
               Our Services
             </div>
-            <h2 className="font-display text-4xl md:text-5xl text-ink leading-[1.05] max-w-2xl">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-ink leading-[1.05] max-w-2xl">
               End-to-end{" "}
               <em className="text-primary not-italic">pump solutions</em> for
               every requirement.
@@ -130,13 +118,13 @@ export const Services = () => {
         </div>
 
         {/* What we offer */}
-        <div className="mt-24 md:mt-32">
-          <div className="max-w-2xl mb-14">
-            <div className="eyebrow mb-5">
+        <div className="mt-16 sm:mt-24 md:mt-32">
+          <div className="max-w-2xl mb-10 sm:mb-14">
+            <div className="eyebrow mb-4 sm:mb-5">
               <span className="inline-block h-px w-8 bg-primary align-middle mr-3" />
               What we offer
             </div>
-            <h2 className="font-display text-4xl md:text-5xl text-ink leading-[1.05]">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-ink leading-[1.05]">
               A full suite of{" "}
               <em className="text-primary not-italic">on-site services</em>.
             </h2>

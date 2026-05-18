@@ -5,14 +5,14 @@ import logo from "@/assets/logo.png";
 export const Footer = () => {
   return (
     <footer className="bg-background border-t border-border">
-      <div className="container-tight py-16">
-        <div className="grid md:grid-cols-12 gap-10">
+      <div className="container-tight py-10 sm:py-16">
+        <div className="grid md:grid-cols-12 gap-8 md:gap-10">
           <div className="md:col-span-5">
             <div className="flex items-center gap-3 mb-5">
               <img
                 src={logo}
                 alt="Shree Enterprise"
-                className="h-[120px] w-[100px] object-contain transition-transform duration-500 hover:scale-105"
+                className="h-[84px] w-[70px] sm:h-[100px] sm:w-[84px] object-contain transition-transform duration-500 hover:scale-105"
               />
               <div>
                 <div className="font-display text-lg text-ink">
@@ -68,7 +68,7 @@ export const Footer = () => {
 
             {/* ✅ ADDRESS WITH ICON */}
             <p className="flex items-start gap-2 text-sm text-ink leading-relaxed">
-              <MapPin size={16} className="mt-1 text-primary" />
+              <MapPin size={16} className="mt-1 text-primary shrink-0" />
               <span>
                 112, Shastri Market Near Railway Station
                 <br />
@@ -77,17 +77,17 @@ export const Footer = () => {
             </p>
 
             {/* ✅ CONTACT WITH ICONS */}
-            <p className="text-sm text-ink-soft leading-relaxed mt-4 space-y-2">
+            <div className="text-sm text-ink-soft leading-relaxed mt-4 space-y-2">
               <span className="flex items-center gap-2 hover:text-primary transition">
-                <Phone size={16} className=" text-primary" />
-                +91 89898 29551 / 89892 22110
+                <Phone size={16} className="text-primary shrink-0" />
+                <span className="break-all">+91 89898 29551 / 89892 22110</span>
               </span>
 
               <span className="flex items-center gap-2 hover:text-primary transition">
-                <Mail size={16} className="text-primary" />
-                shrienterprise.rathi@gmail.com
+                <Mail size={16} className="text-primary shrink-0" />
+                <span className="break-all">shrienterprise.rathi@gmail.com</span>
               </span>
-            </p>
+            </div>
 
             <div className="flex items-center gap-3 mt-6">
               <a

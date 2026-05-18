@@ -38,12 +38,12 @@ export const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="container-tight flex items-center justify-between h-20">
-        <Link to="/" className="flex items-center gap-3">
+      <div className="container-tight flex items-center justify-between h-16 sm:h-20">
+        <Link to="/" className="flex items-center gap-2 sm:gap-3">
           <img
             src={logo}
             alt="Shree Enterprise"
-            className="h-[120px] w-[100px] object-contain shrink-0"
+            className="h-[72px] w-[60px] sm:h-[100px] sm:w-[84px] object-contain shrink-0"
           />
           <div className="leading-tight hidden md:block min-w-0">
             <div className="font-display text-base text-ink truncate">
@@ -85,7 +85,7 @@ export const Navbar = () => {
         </Link>
 
         <button
-          className="lg:hidden text-ink"
+          className="lg:hidden text-ink p-2 -mr-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
           onClick={() => setOpen((s) => !s)}
           aria-label="Menu"
         >
@@ -101,15 +101,15 @@ export const Navbar = () => {
             exit={{ height: 0, opacity: 0 }}
             className="lg:hidden bg-background border-t border-border overflow-hidden"
           >
-            <div className="container-tight py-6 flex flex-col gap-4">
+            <div className="container-tight py-4 flex flex-col gap-1">
               {links.map((l) => (
-                <Link key={l.to} to={l.to} className="text-base text-ink py-2">
+                <Link key={l.to} to={l.to} className="text-base text-ink py-3 min-h-[44px] flex items-center">
                   {l.label}
                 </Link>
               ))}
               <Link
                 to="/contact"
-                className="bg-primary text-primary-foreground rounded-lg text-center py-3 mt-2"
+                className="bg-primary text-primary-foreground rounded-lg text-center py-3.5 mt-3 min-h-[44px] flex items-center justify-center"
               >
                 Get a Quote
               </Link>

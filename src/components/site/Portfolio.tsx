@@ -11,13 +11,13 @@ export const Portfolio = () => {
   return (
     <section id="portfolio" className="py-16 md:py-25 bg-surface">
       <div className="container-tight">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-6 mb-8 sm:mb-12">
           <div className="max-w-2xl">
-            <div className="eyebrow mb-5">
+            <div className="eyebrow mb-4 sm:mb-5">
               <span className="inline-block h-px w-8 bg-primary align-middle mr-3" />
               Product Range
             </div>
-            <h2 className="font-display text-4xl md:text-5xl text-ink leading-[1.05]">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-ink leading-[1.05]">
               A complete portfolio for{" "}
               <em className="text-primary not-italic">every application</em>.
             </h2>
@@ -30,14 +30,14 @@ export const Portfolio = () => {
         </div>
 
         {/* Category tabs */}
-        <div className="flex flex-wrap gap-2 md:gap-3 mb-12 border-b border-border pb-1">
+        <div className="flex overflow-x-auto gap-0 mb-8 sm:mb-12 border-b border-border pb-1 -mx-4 sm:mx-0 px-4 sm:px-0 scrollbar-none">
           {solutions.map((c) => {
             const isActive = c.slug === active;
             return (
               <button
                 key={c.slug}
                 onClick={() => setActive(c.slug)}
-                className={`relative inline-flex items-center gap-2 px-4 md:px-5 py-3 text-sm font-medium transition-colors ${
+                className={`relative inline-flex items-center gap-2 px-3 sm:px-5 py-3 text-sm font-medium transition-colors whitespace-nowrap shrink-0 min-h-[44px] ${
                   isActive ? "text-primary" : "text-ink-soft hover:text-ink"
                 }`}
               >
@@ -73,10 +73,10 @@ export const Portfolio = () => {
           >
             {/* Category intro */}
             <div className="lg:col-span-4">
-              <h3 className="font-display text-3xl md:text-4xl text-ink mb-4">
+              <h3 className="font-display text-2xl sm:text-3xl md:text-4xl text-ink mb-3 sm:mb-4">
                 {current.title}
               </h3>
-              <p className="text-ink-soft leading-relaxed mb-8">
+              <p className="text-ink-soft leading-relaxed mb-6 sm:mb-8 text-sm sm:text-base">
                 {current.tagline}
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
@@ -101,7 +101,7 @@ export const Portfolio = () => {
             </div>
 
             {/* Products grid */}
-            <div className="lg:col-span-8 grid sm:grid-cols-2 gap-4">
+            <div className="lg:col-span-8 grid sm:grid-cols-2 gap-3 sm:gap-4">
               {current.pumps.map((p, i) => (
                 <motion.div
                   key={p.name}
@@ -112,9 +112,9 @@ export const Portfolio = () => {
                 >
                   <Link
                     to={`/solutions/${current.slug}/${p.slug}`}
-                    className="group flex items-center gap-4 bg-card border border-border p-3 hover:border-primary hover:shadow-card transition-all"
+                    className="group flex items-center gap-3 sm:gap-4 bg-card border border-border p-3 sm:p-4 hover:border-primary hover:shadow-card transition-all"
                   >
-                    <div className="h-16 w-16 shrink-0 overflow-hidden bg-surface">
+                    <div className="h-14 w-14 sm:h-16 sm:w-16 shrink-0 overflow-hidden bg-surface">
                       <img
                         src={p.image}
                         alt={p.name}
@@ -122,7 +122,7 @@ export const Portfolio = () => {
                         className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                     </div>
-                    <span className="font-medium text-ink leading-snug flex-1 text-sm">
+                    <span className="font-medium text-ink leading-snug flex-1 text-sm min-w-0">
                       {p.name}
                     </span>
                     <ArrowUpRight

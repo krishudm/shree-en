@@ -22,9 +22,9 @@ const SolutionDetailPage = () => {
       }
       intro={solution.intro}
     >
-      <section className="py-20 md:py-28">
+      <section className="py-10 sm:py-16 md:py-28">
         <div className="container-tight">
-          <div className="flex items-center justify-between mb-14">
+          <div className="flex items-center justify-between mb-8 sm:mb-14">
             <Link
               to="/services"
               className="inline-flex items-center gap-2 text-sm text-ink-soft hover:text-primary transition"
@@ -32,13 +32,13 @@ const SolutionDetailPage = () => {
               <ArrowLeft size={16} />
               All solutions
             </Link>
-            <span className="text-xs uppercase tracking-[0.18em] text-ink-soft">
+            <span className="text-xs uppercase tracking-[0.18em] text-ink-soft shrink-0 ml-4">
               {solution.pumps.length} products
             </span>
           </div>
 
-          <div className="mb-16">
-            <div className="eyebrow mb-5">
+          <div className="mb-10 sm:mb-16">
+            <div className="eyebrow mb-4 sm:mb-5">
               <span className="inline-block h-px w-8 bg-primary align-middle mr-3" />
               What's included
             </div>
@@ -103,10 +103,10 @@ const SolutionDetailPage = () => {
             ))}
           </div>
 
-          <div className="mt-20 border-t border-border pt-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+          <div className="mt-14 sm:mt-20 border-t border-border pt-10 sm:pt-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div>
-              <div className="eyebrow mb-4">Need a recommendation?</div>
-              <h3 className="font-display text-3xl md:text-4xl text-ink max-w-xl leading-[1.1]">
+              <div className="eyebrow mb-3 sm:mb-4">Need a recommendation?</div>
+              <h3 className="font-display text-2xl sm:text-3xl md:text-4xl text-ink max-w-xl leading-[1.1]">
                 Talk to our engineers — get the right pump for your project.
               </h3>
             </div>

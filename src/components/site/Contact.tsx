@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 
 export const Contact = () => {
   return (
-    <section id="contact" className="py-16 md:py-32 bg-deep text-primary-foreground relative overflow-hidden">
+    <section id="contact" className="py-12 sm:py-16 md:py-32 bg-deep text-primary-foreground relative overflow-hidden">
       <div
         aria-hidden
         className="absolute inset-0 opacity-[0.06]"
@@ -13,7 +13,7 @@ export const Contact = () => {
         }}
       />
       <div className="container-tight relative">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
+        <div className="grid lg:grid-cols-12 gap-10 sm:gap-12 lg:gap-20">
           <div className="lg:col-span-7">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -21,23 +21,23 @@ export const Contact = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="text-xs uppercase tracking-[0.22em] text-primary-foreground/60 mb-5">
+              <div className="text-xs uppercase tracking-[0.22em] text-primary-foreground/60 mb-4 sm:mb-5">
                 <span className="inline-block h-px w-8 bg-primary-foreground/40 align-middle mr-3" />
                 Get in touch
               </div>
-              <h2 className="font-display text-4xl md:text-6xl leading-[1.02]">
+              <h2 className="font-display text-3xl sm:text-4xl md:text-6xl leading-[1.05] sm:leading-[1.02]">
                 Let's power your{" "}
                 <em className="not-italic" style={{ color: "hsl(var(--primary-glow))" }}>
                   next project
                 </em>
                 .
               </h2>
-              <p className="mt-7 text-lg text-primary-foreground/75 max-w-xl leading-relaxed">
+              <p className="mt-5 sm:mt-7 text-base sm:text-lg text-primary-foreground/75 max-w-xl leading-relaxed">
                 Visit our Indore showroom, call directly, or write to us — our team responds the same working day.
               </p>
             </motion.div>
 
-            <div className="mt-12 grid sm:grid-cols-2 gap-6">
+            <div className="mt-8 sm:mt-12 grid sm:grid-cols-2 gap-4 sm:gap-6">
               {[
                 {
                   icon: Phone,
@@ -68,7 +68,7 @@ export const Contact = () => {
                 >
                   <c.icon size={18} className="mb-4 opacity-70" />
                   <div className="text-[10px] uppercase tracking-[0.22em] text-primary-foreground/60">{c.label}</div>
-                  <div className="font-display text-lg mt-1">{c.value}</div>
+                  <div className="font-display text-base sm:text-lg mt-1 break-all">{c.value}</div>
                   <div className="text-xs text-primary-foreground/60 mt-1">{c.sub}</div>
                 </a>
               ))}
@@ -81,7 +81,7 @@ export const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.15 }}
             onSubmit={(e) => e.preventDefault()}
-            className="lg:col-span-5 bg-background text-foreground p-8 md:p-10"
+            className="lg:col-span-5 bg-background text-foreground p-5 sm:p-8 md:p-10"
           >
             <div className="font-display text-2xl text-ink mb-6">Request a quote</div>
             {[

@@ -27,9 +27,9 @@ const ProductDetailPage = () => {
       }
       intro={product.desc}
     >
-      <section className="py-16 md:py-24">
+      <section className="py-10 sm:py-16 md:py-24">
         <div className="container-tight">
-          <div className="flex items-center justify-between mb-12">
+          <div className="flex items-center justify-between mb-8 sm:mb-12">
             <Link
               to={`/solutions/${solution.slug}`}
               className="inline-flex items-center gap-2 text-sm text-ink-soft hover:text-primary transition"
@@ -118,7 +118,7 @@ const ProductDetailPage = () => {
           </div>
 
           {product.applications && (
-            <div className="mt-20">
+            <div className="mt-12 sm:mt-20">
               <div className="eyebrow mb-4">Typical applications</div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {product.applications.map((a) => (
@@ -134,14 +134,14 @@ const ProductDetailPage = () => {
           )}
 
           {related.length > 0 && (
-            <div className="mt-24 border-t border-border pt-12">
-              <div className="flex items-end justify-between mb-8">
-                <h3 className="font-display text-2xl md:text-3xl text-ink">
+            <div className="mt-16 sm:mt-24 border-t border-border pt-10 sm:pt-12">
+              <div className="flex items-end justify-between mb-6 sm:mb-8">
+                <h3 className="font-display text-xl sm:text-2xl md:text-3xl text-ink">
                   More from {solution.title}
                 </h3>
                 <Link
                   to={`/solutions/${solution.slug}`}
-                  className="text-sm text-ink-soft hover:text-primary transition"
+                  className="text-sm text-ink-soft hover:text-primary transition shrink-0 ml-4"
                 >
                   View all →
                 </Link>

@@ -49,7 +49,7 @@ export const About = () => {
               <img
                 src={showroom}
                 alt="Showroom"
-                className="w-full h-[420px] sm:h-[320px] md:h-full object-cover transition-transform duration-700 hover:scale-110"
+                className="w-full h-[240px] sm:h-[320px] md:h-full object-cover transition-transform duration-700 hover:scale-110"
               />
             </div>
           </motion.div>
@@ -136,8 +136,8 @@ export const About = () => {
                     whileHover={{ y: -6, scale: 1.05 }}
                     className="p-3 sm:p-4 border rounded-lg text-center transition-all duration-300 hover:shadow-xl hover:border-primary"
                   >
-                    <Icon className="mx-auto mb-2 text-primary" size={24} />
-                    {v.k}
+                    <Icon className="mx-auto mb-2 text-primary" size={20} />
+                    <span className="text-sm">{v.k}</span>
                   </motion.div>
                 );
               })}
@@ -190,7 +190,7 @@ export const About = () => {
               Our Core Values
             </h2>
 
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-4 sm:mt-6">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 mt-4 sm:mt-6">
               {values.map((v, i) => {
                 const Icon = v.icon;
                 return (
@@ -200,14 +200,14 @@ export const About = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.1 }}
                     whileHover={{ y: -8 }}
-                    className="p-4 sm:p-6 border rounded-xl text-center transition-all duration-300 hover:shadow-2xl hover:border-primary bg-card"
+                    className="p-3 sm:p-6 border rounded-xl text-center transition-all duration-300 hover:shadow-2xl hover:border-primary bg-card"
                   >
                     <Icon
                       className="mx-auto mb-2 sm:mb-3 text-primary"
-                      size={28}
+                      size={22}
                     />
-                    <div className="font-semibold text-primary">{v.k}</div>
-                    <p className="mt-2 text-xs sm:text-sm text-ink-soft">
+                    <div className="font-semibold text-primary text-sm sm:text-base">{v.k}</div>
+                    <p className="mt-1.5 text-xs sm:text-sm text-ink-soft leading-snug">
                       {v.v}
                     </p>
                   </motion.div>

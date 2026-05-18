@@ -25,7 +25,7 @@ export const Hero = () => {
         style={{ background: "var(--gradient-brand)" }}
       />
 
-      <div className="container-tight relative grid lg:grid-cols-12 gap-10 lg:gap-16 items-center pt-24 sm:pt-28 md:pt-28 pb-14 sm:pb-16">
+      <div className="container-tight relative grid lg:grid-cols-12 gap-10 lg:gap-16 items-center pt-20 sm:pt-28 md:pt-28 pb-14 sm:pb-16">
         <div className="lg:col-span-7">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -35,7 +35,7 @@ export const Hero = () => {
               delay: 0.05,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="font-display text-[28px] xs:text-[32px] sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] text-ink"
+            className="font-display text-[26px] xs:text-[30px] sm:text-5xl md:text-6xl lg:text-7xl leading-[1.15] text-ink"
           >
             Powering Madhya&nbsp;Pradesh,
             <span className="block italic text-primary">
@@ -47,7 +47,7 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.15 }}
-            className="mt-6 text-[15px] sm:text-base md:text-lg text-ink-soft max-w-[92%] sm:max-w-xl leading-relaxed"
+            className="mt-4 sm:mt-6 text-[14px] sm:text-base md:text-lg text-ink-soft max-w-full sm:max-w-xl leading-relaxed"
           >
             Since 1978, Shree Enterprise has been the trusted distributor of
             Motor, Pumps, electrical cables and pipes across every district of
@@ -84,7 +84,7 @@ export const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="mt-12 grid grid-cols-3 gap-3 sm:gap-6 max-w-[95%] sm:max-w-lg"
+            className="mt-10 sm:mt-12 grid grid-cols-3 gap-2 sm:gap-6 max-w-full sm:max-w-lg"
           >
             {[
               { value: 45, suffix: "+", label: "Years of trust" },
@@ -92,10 +92,10 @@ export const Hero = () => {
               { value: 10000, suffix: "+", label: "Customers" },
             ].map((s) => (
               <div key={s.label}>
-                <div className="font-display text-2xl sm:text-3xl text-primary">
+                <div className="font-display text-xl sm:text-3xl text-primary">
                   <Counter to={s.value} suffix={s.suffix} />
                 </div>
-                <div className="text-[10px] sm:text-xs uppercase tracking-[0.16em] sm:tracking-[0.18em] text-ink-soft mt-1">
+                <div className="text-[9px] sm:text-xs uppercase tracking-[0.12em] sm:tracking-[0.18em] text-ink-soft mt-1 leading-tight">
                   {s.label}
                 </div>
               </div>

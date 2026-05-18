@@ -72,9 +72,9 @@ const BlogPage = () => (
     }
     intro="Practical guides, market insight and updates from the Shree Enterprise team — written by engineers who do the work."
   >
-    <section className="py-16 md:py-32">
+    <section className="py-10 sm:py-16 md:py-32">
       <div className="container-tight">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {posts.map((p, i) => (
             <motion.a
               key={p.title + i}
@@ -94,16 +94,16 @@ const BlogPage = () => (
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
-              <div className="flex items-center gap-3 text-[10px] uppercase tracking-[0.22em] text-ink-soft mb-3">
+              <div className="flex flex-wrap items-center gap-2 text-[10px] uppercase tracking-[0.18em] text-ink-soft mb-3">
                 <span className="text-primary">{p.tag}</span>
-                <span className="h-px w-6 bg-border" />
-                <span className="inline-flex items-center gap-1.5">
+                <span className="h-px w-4 bg-border" />
+                <span className="inline-flex items-center gap-1">
                   <Calendar size={11} /> {p.date}
                 </span>
-                <span className="h-px w-6 bg-border" />
-                <span>{p.read}</span>
+                <span className="h-px w-4 bg-border hidden sm:inline-block" />
+                <span className="hidden sm:inline">{p.read}</span>
               </div>
-              <h2 className="font-display text-2xl text-ink leading-snug group-hover:text-primary transition-colors">
+              <h2 className="font-display text-xl sm:text-2xl text-ink leading-snug group-hover:text-primary transition-colors">
                 {p.title}
               </h2>
               <p className="mt-3 text-ink-soft leading-relaxed text-sm">{p.excerpt}</p>
