@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Neutrals tinted slightly toward brand blue */
+    --background: 220 30% 99%;
+    --foreground: 230 35% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 230 35% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 35% 12%;
+
+    /* Brand: deep royal blue from logo */
+    --primary: 234 78% 36%;
+    --primary-foreground: 220 30% 99%;
+    --primary-glow: 230 90% 55%;
+
+    --secondary: 222 38% 95%;
+    --secondary-foreground: 234 50% 18%;
+
+    --muted: 222 30% 96%;
+    --muted-foreground: 230 12% 42%;
+
+    --accent: 234 78% 36%;
+    --accent-foreground: 220 30% 99%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 225 25% 90%;
+    --input: 225 25% 90%;
+    --ring: 234 78% 36%;
+
+    --radius: 0.25rem;
+
+    /* Brand surfaces */
+    --surface: 222 35% 97%;
+    --ink: 230 40% 8%;
+    --ink-soft: 230 22% 28%;
+    --hairline: 225 22% 88%;
+
+    /* Gradients */
+    --gradient-brand: linear-gradient(135deg, hsl(234 78% 30%), hsl(230 90% 55%));
+    --gradient-deep: linear-gradient(180deg, hsl(234 60% 12%), hsl(234 78% 22%));
+    --gradient-fade: linear-gradient(180deg, hsl(222 35% 97%) 0%, hsl(220 30% 99%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 1px 2px hsl(234 40% 10% / 0.04), 0 8px 24px -12px hsl(234 60% 20% / 0.12);
+    --shadow-card: 0 1px 0 hsl(234 30% 90%), 0 24px 48px -24px hsl(234 60% 20% / 0.18);
+    --shadow-deep: 0 30px 80px -30px hsl(234 80% 20% / 0.45);
+
+    /* Motion */
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-feature-settings: 'ss01', 'cv11';
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Fraunces', 'Times New Roman', serif;
+    font-optical-sizing: auto;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .container-tight {
+    @apply mx-auto px-6 md:px-10;
+    max-width: 1280px;
+  }
+  .eyebrow {
+    @apply text-xs uppercase tracking-[0.22em] font-medium text-primary;
+  }
+  .hairline {
+    @apply border-t;
+    border-color: hsl(var(--hairline));
+  }
+  .text-ink { color: hsl(var(--ink)); }
+  .text-ink-soft { color: hsl(var(--ink-soft)); }
+  .bg-surface { background-color: hsl(var(--surface)); }
+  .bg-deep { background: var(--gradient-deep); }
+  .bg-brand { background: var(--gradient-brand); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-deep { box-shadow: var(--shadow-deep); }
+}
