@@ -4,16 +4,11 @@ import { PageShell } from "@/components/site/PageShell";
 import { About } from "@/components/site/About";
 
 const AboutPage = () => (
-  <div className="px-4 sm:px-6">
+  <div className="px-4 sm:px-6 ">
     <PageShell
       eyebrow="About us"
-      title={
-        <span className="block text-2xl sm:text-3xl md:text-4xl leading-tight">
-          Four decades of{" "}
-          <em className="text-primary not-italic">trusted distribution</em>.
-        </span>
-      }
-      intro="Founded in 1978 by Mr. Ramshchandra Rathi, Shree Enterprise has grown into one of Madhya Pradesh's most trusted names in pumps, electrical equipment and pipes."
+      title="About Shree Enterprise"
+      // description="With over 45 years of experience, we are the leading distributor of water pumps, cables, and pipes in Madhya Pradesh. Our commitment to quality, reliability, and customer satisfaction has made us the go-to choice for residential, commercial, and agricultural needs across the state."
     >
       <About />
     </PageShell>

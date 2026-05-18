@@ -31,9 +31,9 @@ const stats = [
 export const About = () => {
   return (
     <section id="about" className="py-10 sm:py-14 md:py-23 bg-surface">
-      <h1 className="text-2xl sm:text-3xl uppercase underline text-primary text-center mb-6 font-bold">
+      {/* <h1 className="text-2xl sm:text-3xl uppercase underline text-primary text-center mb-6 font-bold">
         About Us
-      </h1>
+      </h1> */}
 
       <div className="container-tight px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-14 items-center">
@@ -64,7 +64,7 @@ export const About = () => {
               className="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug"
             >
               Four decades of{" "}
-              <span className="text-primary">trusted distribution</span>
+              <span className="text-primary">Trusted Distribution</span>
             </motion.h2>
 
             {/* Description */}

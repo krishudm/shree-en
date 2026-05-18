@@ -26,15 +26,13 @@ export const PageShell = ({
           </div> */}
 
           {/* Title */}
-          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-ink leading-tight max-w-3xl mx-auto">
+          <h1 className="font-display  text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-ink leading-tight max-w-3xl mx-auto">
             {title}
           </h1>
 
           {/* Intro */}
           {intro && (
-            <p className="mt-5  sm:text-lg  max-w-xl mx-auto ">
-              {intro}
-            </p>
+            <p className="mt-5  sm:text-lg  max-w-xl mx-auto ">{intro}</p>
           )}
         </div>
       </section>

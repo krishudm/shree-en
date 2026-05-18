@@ -16,8 +16,8 @@ export const Hero = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* Stronger overlay on mobile for readability; lighter on desktop */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-background/30 lg:from-background/85 lg:via-background/40 lg:to-transparent" />
+      {/* Strong mobile overlay for readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/60 lg:from-background/85 lg:via-background/40 lg:to-transparent" />
 
       <div
         aria-hidden
@@ -25,7 +25,7 @@ export const Hero = () => {
         style={{ background: "var(--gradient-brand)" }}
       />
 
-      <div className="container-tight relative grid lg:grid-cols-12 gap-10 lg:gap-16 items-center pt-28 md:pt-28 pb-16">
+      <div className="container-tight relative grid lg:grid-cols-12 gap-10 lg:gap-16 items-center pt-24 sm:pt-28 md:pt-28 pb-14 sm:pb-16">
         <div className="lg:col-span-7">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -35,7 +35,7 @@ export const Hero = () => {
               delay: 0.05,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="font-display text-[36px] sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-ink"
+            className="font-display text-[28px] xs:text-[32px] sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] text-ink"
           >
             Powering Madhya&nbsp;Pradesh,
             <span className="block italic text-primary">
@@ -47,7 +47,7 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.15 }}
-            className="mt-6 text-base md:text-lg text-ink-soft max-w-xl leading-relaxed"
+            className="mt-6 text-[15px] sm:text-base md:text-lg text-ink-soft max-w-[92%] sm:max-w-xl leading-relaxed"
           >
             Since 1978, Shree Enterprise has been the trusted distributor of
             Motor, Pumps, electrical cables and pipes across every district of
@@ -58,11 +58,11 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.25 }}
-            className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4"
+            className="mt-8 flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 sm:gap-4"
           >
             <a
               href="#services"
-              className="group inline-flex rounded-lg items-center gap-2 sm:gap-3 bg-primary text-primary-foreground px-5 sm:px-7 py-3.5 sm:py-4 text-sm font-medium hover:opacity-90 transition"
+              className="group w-full sm:w-auto justify-center inline-flex rounded-lg items-center gap-2 sm:gap-3 bg-primary text-primary-foreground px-5 sm:px-7 py-3.5 sm:py-4 text-sm font-medium hover:opacity-90 transition"
             >
               Explore our products
               <ArrowRight
@@ -70,9 +70,10 @@ export const Hero = () => {
                 className="transition-transform group-hover:translate-x-1"
               />
             </a>
+
             <a
               href="tel:+918989829551"
-              className="inline-flex rounded-lg items-center gap-2 sm:gap-3 px-5 sm:px-7 py-3.5 sm:py-4 text-sm font-medium text-ink border border-border hover:border-primary hover:text-primary transition bg-background/60 backdrop-blur"
+              className="w-full sm:w-auto justify-center inline-flex rounded-lg items-center gap-2 sm:gap-3 px-5 sm:px-7 py-3.5 sm:py-4 text-sm font-medium text-ink border border-border hover:border-primary hover:text-primary transition bg-background/60 backdrop-blur"
             >
               <Phone size={16} />
               +91 89898 29551
@@ -83,7 +84,7 @@ export const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="mt-12 grid grid-cols-3 gap-4 sm:gap-6 max-w-lg"
+            className="mt-12 grid grid-cols-3 gap-3 sm:gap-6 max-w-[95%] sm:max-w-lg"
           >
             {[
               { value: 45, suffix: "+", label: "Years of trust" },
